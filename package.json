@@ -1,0 +1,35 @@
+{
+  "name": "super-tipster",
+  "version": "1.0.0",
+  "description": "Tooltips that are good for desktop use but also very mobile friendly.",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/ChidoYo/super-tipster.git"
+  },
+  "keywords": [
+    "Tooltips"
+  ],
+  "author": "iChido",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ChidoYo/super-tipster/issues"
+  },
+  "homepage": "https://github.com/ChidoYo/super-tipster#readme",
+  "devDependencies": {
+    "browser-sync": "^2.18.8",
+    "del": "^2.2.2",
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^3.1.1",
+    "gulp-concat": "^2.6.1",
+    "gulp-cssnano": "^2.1.2",
+    "gulp-sass": "^3.1.0",
+    "gulp-uglify": "^2.1.2",
+    "gulp-useref": "^3.1.2",
+    "run-sequence": "^1.2.2"
+  },
+  "dependencies": {}
+}

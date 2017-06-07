@@ -1,0 +1,16 @@
+// Foundation 6
+$global-width: 1020px;
+@import '../lib/foundation-sites/scss/foundation';
+@include foundation-everything(true);
+
+$global-flexbox: true;
+
+@include foundation-global-styles;
+@include foundation-button;
+// @include foundation-grid;
+@include foundation-flex-classes;
+@include foundation-flex-grid;
+
+
+// Super-Tipster
+@import 'super-tipster';
