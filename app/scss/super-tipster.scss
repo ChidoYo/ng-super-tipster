@@ -1,4 +1,8 @@
 // Super Tipster
+super-tipster {
+    position: relative;
+}
+
 .super-tipster {
     display: none;
     background: #fff;
@@ -8,6 +12,7 @@
     width: 300px;
 
     position: absolute;
+    top: 0;
     transform: translateY(20%);
 
     &.is-open {

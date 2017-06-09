@@ -1,14 +1,18 @@
 <!DOCTYPE html>
-<html>
+<html ng-app="tipster">
     <head>
         <meta charset="utf-8">
-        <title>Super Tipster</title>
+        <title>Angular Super Tipster</title>
 
         <!--build:css css/styles.min.css-->
         <link rel="stylesheet" href="/css/styles.css">
         <!--endbuild-->
     </head>
-    <body>
+    <body ng-controller="tipsperController">
+
+        <div class="top-bar">
+            <strong>{{ title }}</strong>
+        </div>
 
         <div class="row">
           <div class="columns">
@@ -21,7 +25,19 @@
             <a href="#" id="linkOne" tipster-view>Link 1</a>
           </div>
           <div class="columns large-4 medium-4 small-4">
-            <button class="button small secondary" id="linkTwo" tipster-view>Link 2</button>
+              <super-tipster>
+                  <button class="button small secondary" tipster-trigger>Link 2</button>
+                  <tipster-popup>
+                      <div class="super-tipster">
+                          <div class="tipster-content">
+                              <div>
+                                  <strong>Heading Yo!</strong>
+                              </div>
+                              <span>This is some content here for just the fun of having a sample. As I continue typing this I don't care about my spelling because I just need some content for this thing.</span>
+                          </div>
+                      </div>
+                  </tipster-popup>
+              </super-tipster>
           </div>
           <div class="columns large-4 medium-4 small-4 text-right">
             <button class="button small" id="linkThree" tipster-view>Link 3</button>
@@ -49,18 +65,10 @@
             </div>
         </div>
 
-        <div class="super-tipster" id="tipster">
-          <div class="tipster-content">
-              <div>
-                <strong>Heading Here</strong>
-              </div>
-              This is some content here for just the fun of having a sample. As I continue typing this I don't care about my spelling because I just need some content for this thing.
-          </div>
-        </div>
-
         <script src="lib/jquery/dist/jquery.min.js"></script>
-        <!--build:js js/main.min.js -->
-        <script src="js/main.js"></script>
+        <script src="lib/angular/angular.js"></script>
+        <!--build:js js/super-tipster.min.js -->
+        <script src="js/super-tipster.js"></script>
         <!-- endbuild -->
     </body>
 </html>

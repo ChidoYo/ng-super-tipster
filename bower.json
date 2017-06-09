@@ -1,6 +1,6 @@
 {
   "name": "super-tipster",
-  "description": "Tooltips that are good for desktop use but also very mobile friendly.",
+  "description": "Angular Directive for Tooltips that are good for desktop use but also very mobile friendly.",
   "main": "index.js",
   "authors": [
     "iChido"
