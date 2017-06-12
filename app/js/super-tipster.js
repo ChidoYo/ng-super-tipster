@@ -6,7 +6,7 @@ var tipster = angular.module('tipster', []);
 tipster.controller('tipsperController', function ($scope) {
 
     $scope.title = 'Angular Super Tipster';
-})
+});
 
 
 // Directives
@@ -15,21 +15,45 @@ tipster.directive('superTipster', function () {
     return {
         restrict: 'E',
         scope: {},
-        // trasclude: {
-        //     'tipster-popup': 'tipster-popup'
-        // },
         controller: function ($scope) {
 
+            this.popupTipster;
             this.openedTipster = false;
-
-            this.toggleTipster = function () {
-                console.log('toggleTipster', $scope);
-                $scope.openedTipster = !$scope.openedTipster;
-            }
+            this.setTimed;
         },
-        controllerAs: 'super'
+        controllerAs: 'super',
+        link: function (scope, element, attrs, ctrl) {
+
+            var theTipster = element.find('.super-tipster');
+
+            ctrl.popupTipster = function () {
+
+                ctrl.openedTipster = !ctrl.openedTipster;
+
+                if (ctrl.openedTipster) {
+                    theTipster.show(ctrl.setTimed);
+                } else {
+                    theTipster.hide(ctrl.setTimed);
+                }
+            };
+
+            $(document).on('click', function (e) {
+
+                e.preventDefault();
+                var itemClick = element.find(event.target).length > 0;
+
+                if (itemClick) {
+                    return;
+                }
+
+                scope.$apply(function () {
+                    ctrl.openedTipster = false;
+                    theTipster.hide(ctrl.setTimed);
+                });
+            });
+        }
     }
-})
+});
 
 tipster.directive('tipsterTrigger', function () {
 
@@ -41,35 +65,10 @@ tipster.directive('tipsterTrigger', function () {
 
             // Detect click
             element.on('click', function (e) {
-                // ctrl.toggleTipster();
-                console.log('toggle', element.siblings().find('.super-tipster'));
-                element.siblings().find('.super-tipster').toggle();
-            })
+
+                e.preventDefault();
+                ctrl.popupTipster();
+            });
         }
     }
-})
-
-// tipster.directive('tipsterPopup', function () {
-//
-//     return {
-//         restrict: 'E',
-//         require: '^^superTipster',
-//         scope: {},
-//         link: function (scope, element, attrs, ctrl) {
-//
-//             scope.tipsterOpen = ctrl.openedTipster;
-//
-//             console.log('scope', scope);
-//
-//             scope.$watch('scope.tipsterOpen', function () {
-//                 console.log('loaded?');
-//                 if (scope.tipsterOpen) {
-//                     console.log('open');
-//                 } else {
-//                     console.log('closed');
-//                 }
-//             });
-//
-//         }
-//     }
-// })
+});

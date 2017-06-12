@@ -10,17 +10,23 @@ super-tipster {
     border-radius: 4px;
     box-shadow: 0 0 12px 0px rgba(51,51,51,0.3);
     width: 300px;
+    text-align: left;
 
     position: absolute;
-    top: 0;
-    transform: translateY(20%);
+    top: 27px;
+    left: 0;
+    z-index: 1000;
+
+    .tipster-header {
+        font-weight: bold;
+    }
 
     &.is-open {
         display: block;
     }
 
     &.middle {
-        transform: translate(-40%, 20%);
+        transform: translate(-40%);
 
         .tipster-content {
 
@@ -35,7 +41,7 @@ super-tipster {
     }
 
     &.right {
-        transform: translate(-81%, 20%);
+        transform: translate(-81%);
 
         .tipster-content {
 
@@ -75,6 +81,14 @@ super-tipster {
             position: absolute;
             top: -11px;
             left: 7px;
+        }
+
+        .close-tipster {
+            cursor: pointer;
+            position: absolute;
+            top: 1px;
+            right: 7px;
+            padding: 2px 6px;
         }
     }
 }

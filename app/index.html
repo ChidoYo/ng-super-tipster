@@ -22,7 +22,19 @@
 
         <div class="row">
           <div class="columns large-4 medium-4 small-4 text-right">
-            <a href="#" id="linkOne" tipster-view>Link 1</a>
+              <super-tipster>
+                  <a href="#" tipster-trigger>Link 1</a>
+                  <tipster-content>
+                      <div class="super-tipster">
+                          <div class="tipster-content">
+                              <div class="tipster-header">
+                                  Heading One!
+                              </div>
+                              <span>I'm number one! I'm number one! I'm number one! I'm number one! I'm number one! I'm number one! I'm number one! I'm number one! I'm number one! I'm number one! I'm number one! I'm number one! I'm number one! I'm number one! I'm number one! I'm number one! I'm number one! I'm number one! </span>
+                          </div>
+                      </div>
+                  </tipster-content>
+              </super-tipster>
           </div>
           <div class="columns large-4 medium-4 small-4">
               <super-tipster>
@@ -30,8 +42,9 @@
                   <tipster-popup>
                       <div class="super-tipster">
                           <div class="tipster-content">
-                              <div>
-                                  <strong>Heading Yo!</strong>
+                              <span class="close-tipster">x</span>
+                              <div class="tipster-header">
+                                  Heading Two!
                               </div>
                               <span>This is some content here for just the fun of having a sample. As I continue typing this I don't care about my spelling because I just need some content for this thing.</span>
                           </div>
@@ -40,7 +53,19 @@
               </super-tipster>
           </div>
           <div class="columns large-4 medium-4 small-4 text-right">
-            <button class="button small" id="linkThree" tipster-view>Link 3</button>
+              <super-tipster>
+                  <button class="button small" tipster-trigger>Link 3</button>
+                  <tipster-popup>
+                      <div class="super-tipster">
+                          <div class="tipster-content">
+                              <div class="tipster-header">
+                                  Heading Three!
+                              </div>
+                              <span>I came in third place. I am so sad because I come third. How am I going to go on like this?</span>
+                          </div>
+                      </div>
+                  </tipster-popup>
+              </super-tipster>
           </div>
         </div>
 
@@ -52,16 +77,16 @@
 
         <div class="row">
             <div class="columns large-3">
-                <button class="button small secondary" tipster-view>Link</button>
+                <button class="button small secondary">Link</button>
             </div>
             <div class="columns large-3">
-                <button class="button small secondary" tipster-view>Link</button>
+                <button class="button small secondary">Link</button>
             </div>
             <div class="columns large-3">
-                <button class="button small secondary" tipster-view>Link</button>
+                <button class="button small secondary">Link</button>
             </div>
             <div class="columns large-3">
-                <button class="button small secondary" tipster-view>Link</button>
+                <button class="button small secondary">Link</button>
             </div>
         </div>
 
