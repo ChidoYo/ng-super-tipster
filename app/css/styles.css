@@ -4986,7 +4986,7 @@ super-tipster {
   border: 1px #cacaca solid;
   border-radius: 4px;
   box-shadow: 0 0 12px 0px rgba(51, 51, 51, 0.3);
-  width: 300px;
+  min-width: 200px;
   text-align: left;
   position: absolute;
   top: 27px;
@@ -4997,17 +4997,20 @@ super-tipster {
   .super-tipster.is-open {
     display: block; }
   .super-tipster.middle {
-    transform: translate(-40%); }
+    left: -75px; }
     .super-tipster.middle .tipster-content:before {
-      left: 135px; }
+      left: 45%; }
     .super-tipster.middle .tipster-content:after {
-      left: 135px; }
+      left: 45%; }
   .super-tipster.right {
-    transform: translate(-81%); }
+    left: auto;
+    right: 0; }
     .super-tipster.right .tipster-content:before {
-      left: 260px; }
+      left: auto;
+      right: 0.4rem; }
     .super-tipster.right .tipster-content:after {
-      left: 260px; }
+      left: auto;
+      right: 0.4rem; }
   .super-tipster .tipster-content {
     padding: 10px 14px;
     position: relative; }
@@ -5019,8 +5022,8 @@ super-tipster {
       border-width: 0 12px 12px 12px;
       border-color: transparent transparent #cacaca transparent;
       position: absolute;
-      top: -12px;
-      left: 7px; }
+      top: -0.75rem;
+      left: 0.4rem; }
     .super-tipster .tipster-content:after {
       content: '';
       width: 0;
@@ -5029,8 +5032,8 @@ super-tipster {
       border-width: 0 12px 12px 12px;
       border-color: transparent transparent #ffffff transparent;
       position: absolute;
-      top: -11px;
-      left: 7px; }
+      top: -0.7rem;
+      left: 0.4rem; }
     .super-tipster .tipster-content .close-tipster {
       cursor: pointer;
       position: absolute;
