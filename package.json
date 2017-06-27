@@ -1,5 +1,5 @@
 {
-  "name": "super-tipster",
+  "name": "ng-super-tipster",
   "version": "1.0.0",
   "description": "Tooltips that are good for desktop use but also very mobile friendly.",
   "main": "index.js",

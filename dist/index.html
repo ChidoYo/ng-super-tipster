@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html ng-app="tipster">
+    <head>
+        <meta charset="utf-8">
+        <title>Angular Super Tipster</title>
+
+        <link rel="stylesheet" href="css/styles.min.css">
+    </head>
+    <body ng-controller="tipsperController">
+
+        <div class="top-bar">
+            <strong>{{ title }}</strong>
+        </div>
+
+        <div class="row">
+          <div class="columns">
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam velit neque, efficitur eu eleifend auctor, aliquet eu turpis. Nam eu hendrerit nisl. Ut a vestibulum odio. Ut ipsum massa, varius at gravida sit amet, dignissim vestibulum metus. Morbi mattis lobortis tellus. Curabitur condimentum suscipit turpis ut feugiat. Mauris consequat, tortor imperdiet blandit congue, libero odio vehicula mauris, ut ullamcorper enim tortor in elit. Maecenas nunc dui, suscipit vel turpis et, suscipit tempor eros. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce enim tortor, mattis quis ullamcorper vel, convallis eu enim. Nunc sed dolor venenatis libero lobortis dapibus vel vel arcu. Suspendisse potenti.</p>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="columns large-4 medium-4 small-4">
+              <super-tipster>
+                  <a href="#" tipster-trigger>Link 1</a>
+                  <div class="super-tipster">
+                      <div class="tipster-content">
+                          <div class="tipster-header">
+                              Heading One!
+                          </div>
+                          <span>I'm number one! I'm number one! I'm number one! I'm number one! I'm number one! I'm number one! I'm number one! I'm number one! I'm number one! I'm number one! I'm number one! I'm number one! I'm number one! I'm number one! I'm number one! I'm number one! I'm number one! I'm number one! </span>
+                      </div>
+                  </div>
+              </super-tipster>
+          </div>
+          <div class="columns large-4 medium-4 small-4">
+              <super-tipster width="400">
+                  <button class="button small secondary" tipster-trigger>Link 2</button>
+                  <div class="super-tipster">
+                      <div class="tipster-content">
+                          <span class="close-tipster" close-tipster>x</span>
+                          <div class="tipster-header">
+                              Heading Two!
+                          </div>
+                          <span>This is some content here for just the fun of having a sample. As I continue typing this I don't care about my spelling because I just need some content for this thing.</span>
+                      </div>
+                  </div>
+              </super-tipster>
+          </div>
+          <div class="columns large-4 medium-4 small-4 text-right">
+              <super-tipster>
+                  <button class="button small" tipster-trigger>Link 3</button>
+                  <div class="super-tipster">
+                      <div class="tipster-content">
+                          <div class="tipster-header">
+                              Heading Three!
+                          </div>
+                          <span>I came in third place. I am so sad because I come third. How am I going to go on like this?</span>
+                      </div>
+                  </div>
+              </super-tipster>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="columns">
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam velit neque, efficitur eu eleifend auctor, aliquet eu turpis. Nam eu hendrerit nisl. Ut a vestibulum odio. Ut ipsum massa, varius at gravida sit amet, dignissim vestibulum metus. Morbi mattis lobortis tellus. Curabitur condimentum suscipit turpis ut feugiat. Mauris consequat, tortor imperdiet blandit congue, libero odio vehicula mauris, ut ullamcorper enim tortor in elit. Maecenas nunc dui, suscipit vel turpis et, suscipit tempor eros. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce enim tortor, mattis quis ullamcorper vel, convallis eu enim. Nunc sed dolor venenatis libero lobortis dapibus vel vel arcu. Suspendisse potenti.</p>
+          </div>
+        </div>
+
+        <div class="row">
+            <div class="columns large-3">
+                <button class="button small secondary">Link</button>
+            </div>
+            <div class="columns large-3">
+                <button class="button small secondary">Link</button>
+            </div>
+            <div class="columns large-3">
+                <button class="button small secondary">Link</button>
+            </div>
+            <div class="columns large-3">
+                <button class="button small secondary">Link</button>
+            </div>
+        </div>
+
+        <script src="lib/jquery/dist/jquery.min.js"></script>
+        <script src="lib/angular/angular.js"></script>
+        <script src="js/super-tipster.min.js"></script>
+    </body>
+</html>
