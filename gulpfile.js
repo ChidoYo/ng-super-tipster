@@ -26,17 +26,18 @@ gulp.task('sass', function(){
     }))
 });
 
-// var scssStream = gulp.src([...])
-//     .pipe(sass())
-//     .pipe(concat('scss-files.scss'))
-// ;
-
 gulp.task('useref', function(){
   return gulp.src('app/*.html')
     .pipe(useref())
     .pipe(gulpIf('*.js', uglify()))
     .pipe(gulpIf('*.css', cssnano()))
     .pipe(gulp.dest('dist'))
+});
+
+// copy scss
+gulp.task('copySass', function() {
+    gulp.src('app/scss/super-tipster.scss')
+        .pipe(gulp.dest('./dist/scss'))
 });
 
 // Cleaning
@@ -47,7 +48,7 @@ gulp.task('clean', function() {
 })
 
 gulp.task('clean:dist', function() {
-  return del.sync(['dist/**/*', '!dist/images', '!dist/images/**/*']);
+  return del.sync(['dist/**/*']);
 });
 
 // Watch
@@ -59,9 +60,11 @@ gulp.task('watch', ['browserSync', 'sass'], function(){
 
 // Build
 gulp.task('build', function (callback) {
-  runSequence('clean:dist',
-    ['sass', 'useref', 'images', 'fonts'],
-    callback
+  runSequence(
+     'clean:dist',
+     'sass',
+     ['useref', 'copySass'],
+     callback
   )
 });
 

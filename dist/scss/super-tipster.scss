@@ -1,0 +1,102 @@
+// Variables
+$background-color: #fff;
+$border-color: #cacaca;
+$border-radius: 4px;
+
+// Super Tipster
+super-tipster {
+    position: relative;
+}
+
+.super-tipster {
+    display: none;
+    background: $background-color;
+    border: 1px $border-color solid;
+    border-radius: $border-radius;
+    box-shadow: 0 0 12px 0px rgba(51,51,51,0.3);
+    min-width: 200px;
+    text-align: left;
+
+    position: absolute;
+    top: 27px;
+    left: 0;
+    z-index: 1000;
+
+    .tipster-header {
+        font-weight: bold;
+    }
+
+    &.is-open {
+        display: block;
+    }
+
+    &.middle {
+        left: -75px;
+
+        .tipster-content {
+
+            &:before {
+                left: 45%;
+            }
+
+            &:after {
+                left: 45%;
+            }
+        }
+    }
+
+    &.right {
+        left: auto;
+        right: 0;
+
+        .tipster-content {
+
+            &:before {
+                left: auto;
+                right: 0.4rem;
+            }
+
+            &:after {
+                left: auto;
+                right: 0.4rem;
+            }
+        }
+    }
+
+    .tipster-content {
+        padding: 10px 14px;
+        position: relative;
+
+        &:before {
+            content: '';
+            width: 0;
+            height: 0;
+            border-style: solid;
+            border-width: 0 12px 12px 12px;
+            border-color: transparent transparent #cacaca transparent;
+            position: absolute;
+            top: -0.75rem;
+            left: 0.4rem;
+        }
+
+        &:after {
+            content: '';
+            width: 0;
+            height: 0;
+            border-style: solid;
+            border-width: 0 12px 12px 12px;
+            border-color: transparent transparent #ffffff transparent;
+            position: absolute;
+            top: -0.7rem;
+            left: 0.4rem;
+        }
+
+        .close-tipster {
+            cursor: pointer;
+            position: absolute;
+            top: 1px;
+            right: 7px;
+            padding: 2px 6px;
+        }
+    }
+}
