@@ -1,16 +1,16 @@
 'use strict';
 
 // Module Tipster
-var tipster = angular.module('tipster', []);
+angular.module('tipster', []);
 
-tipster.controller('tipsperController', function ($scope) {
+angular.module('tipster', []).controller('tipsperController', function ($scope) {
 
     $scope.title = 'Angular Super Tipster';
 });
 
 
 // Directives
-tipster.directive('superTipster', function () {
+angular.module('tipster').directive('superTipster', function () {
 
     return {
         restrict: 'E',
@@ -38,7 +38,7 @@ tipster.directive('superTipster', function () {
 
                 if (value) {
 
-                    console.log('override width to ', value);
+                    // console.log('override width to ', value);
 
                     var doWidth = scope.width;
 
@@ -48,7 +48,7 @@ tipster.directive('superTipster', function () {
                     })
                 } else {
 
-                    console.log('default width of 200px');
+                    // console.log('default width of 200px');
                 }
             };
 
@@ -102,7 +102,7 @@ tipster.directive('superTipster', function () {
     }
 });
 
-tipster.directive('tipsterTrigger', function () {
+angular.module('tipster').directive('tipsterTrigger', function () {
 
     return {
         restrict: 'A',
@@ -120,7 +120,7 @@ tipster.directive('tipsterTrigger', function () {
     }
 });
 
-tipster.directive('closeTipster', function () {
+angular.module('tipster').directive('closeTipster', function () {
 
     return {
         restrict: 'A',
