@@ -1,16 +1,15 @@
 'use strict';
 
 // Module Tipster
-angular.module('tipster', []);
+angular.module('tipster', [])
 
-angular.module('tipster', []).controller('tipsperController', function ($scope) {
+.controller('tipsperController', function ($scope) {
 
     $scope.title = 'Angular Super Tipster';
-});
-
+})
 
 // Directives
-angular.module('tipster').directive('superTipster', function () {
+.directive('superTipster', function () {
 
     return {
         restrict: 'E',
@@ -100,9 +99,9 @@ angular.module('tipster').directive('superTipster', function () {
             });
         }
     }
-});
+})
 
-angular.module('tipster').directive('tipsterTrigger', function () {
+.directive('tipsterTrigger', function () {
 
     return {
         restrict: 'A',
@@ -118,9 +117,9 @@ angular.module('tipster').directive('tipsterTrigger', function () {
             });
         }
     }
-});
+})
 
-angular.module('tipster').directive('closeTipster', function () {
+.directive('closeTipster', function () {
 
     return {
         restrict: 'A',
