@@ -3,6 +3,11 @@ $background-color: #fff;
 $border-color: #cacaca;
 $border-radius: 4px;
 
+// ios-device
+body.ios-device {
+    cursor: pointer;
+}
+
 // Super Tipster
 super-tipster {
     position: relative;
