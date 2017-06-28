@@ -1,12 +1,10 @@
-'use strict';
-
 // Module Tipster
 angular.module('tipster', [])
 
-.controller('tipsperController', function ($scope) {
+.controller('tipsperController', ['$scope', function ($scope) {
 
     $scope.title = 'Angular Super Tipster';
-})
+}])
 
 // Directives
 .directive('superTipster', function () {
@@ -16,13 +14,12 @@ angular.module('tipster', [])
         scope: {
             width: '@'
         },
-        controller: function ($scope) {
+        controller: function () {
 
             this.popupTipster;
             this.openedTipster = false;
             this.setTimed;
         },
-        controllerAs: 'super',
         link: function (scope, element, attrs, ctrl) {
 
             var theTipster = element.find('.super-tipster');
@@ -83,9 +80,9 @@ angular.module('tipster', [])
                 }
             };
 
-            $(document).on('click', function (e) {
+            $(document).on('click', function (event) {
 
-                e.preventDefault();
+                event.preventDefault();
                 var itemClick = element.find(event.target).length > 0;
 
                 if (itemClick) {
@@ -110,9 +107,9 @@ angular.module('tipster', [])
         link: function (scope, element, attrs, ctrl) {
 
             // Detect click
-            element.on('click', function (e) {
+            element.on('click', function (event) {
 
-                e.preventDefault();
+                event.preventDefault();
                 ctrl.popupTipster();
             });
         }
@@ -127,9 +124,9 @@ angular.module('tipster', [])
         scope: {},
         link: function (scope, element, attrs, ctrl) {
 
-            element.on('click', function (e) {
+            element.on('click', function (event) {
 
-                e.preventDefault();
+                event.preventDefault();
                 ctrl.popupTipster();
             });
         }
