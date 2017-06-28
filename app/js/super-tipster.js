@@ -22,12 +22,18 @@ angular.module('tipster', [])
         },
         link: function (scope, element, attrs, ctrl) {
 
+            var userAgent = navigator.userAgent || navigator.vendor || window.opera;
             var theTipster = element.find('.super-tipster');
             // var tipsterWidth = theTipster.width();
             var viewportWidth = $(window).width();
             var firstRight = (viewportWidth / 3);
             var secondRight = (viewportWidth / 3) * 2;
             var position = element.position();
+
+            // add .ios class to body
+            if (/iPad|iPhone|iPod/.test(userAgent) && !window.MSStream) {
+                $('body').addClass('ios-device')
+            }
 
             // if-width method
             var widthOverride = function (value) {
@@ -78,6 +84,8 @@ angular.module('tipster', [])
             };
 
             $(document).on('click', function (event) {
+
+                console.log('doc clicked');
 
                 event.preventDefault();
                 var itemClick = element.find(event.target).length > 0;

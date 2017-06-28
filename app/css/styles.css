@@ -6150,6 +6150,9 @@ textarea {
       .column-block > :last-child {
         margin-bottom: 0; } }
 
+body.ios-device {
+  cursor: pointer; }
+
 super-tipster {
   position: relative; }
 
