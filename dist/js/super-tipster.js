@@ -34,6 +34,8 @@ angular.module('tipster', [])
 
                 if (value) {
 
+                    // console.log('override width to ', value);
+
                     var doWidth = scope.width;
 
                     theTipster.css({
@@ -41,7 +43,8 @@ angular.module('tipster', [])
                         'left': -(doWidth / 2) * .75
                     })
                 } else {
-                    //
+
+                    // console.log('default width of 200px');
                 }
             };
 
