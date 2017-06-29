@@ -28,7 +28,7 @@ angular.module('tipster', [])
             var viewportWidth = $(window).width();
             var firstRight = (viewportWidth / 3);
             var secondRight = (viewportWidth / 3) * 2;
-            var position = element.position();
+            var offset = element.offset();
 
             // add .ios class to body
             if (/iPad|iPhone|iPod/.test(userAgent) && !window.MSStream) {
@@ -40,6 +40,8 @@ angular.module('tipster', [])
 
                 if (value) {
 
+                    // console.log('override width to ', value);
+
                     var doWidth = scope.width;
 
                     theTipster.css({
@@ -47,7 +49,8 @@ angular.module('tipster', [])
                         'left': -(doWidth / 2) * .75
                     })
                 } else {
-                    //
+
+                    // console.log('default width of 200px');
                 }
             };
 
@@ -58,13 +61,13 @@ angular.module('tipster', [])
                 if (ctrl.openedTipster) {
 
                     // Width conditions
-                    if (position.left >= firstRight && position.left < secondRight) {
+                    if (offset.left >= firstRight && offset.left < secondRight) {
 
                         theTipster.show(ctrl.setTimed).addClass('middle');
 
                         widthOverride(scope.width);
 
-                    } else if (position.left >= secondRight && position.left < viewportWidth) {
+                    } else if (offset.left >= secondRight && offset.left < viewportWidth) {
 
                         theTipster.show(ctrl.setTimed).addClass('right');
 
@@ -84,8 +87,6 @@ angular.module('tipster', [])
             };
 
             $(document).on('click', function (event) {
-
-                console.log('doc clicked');
 
                 event.preventDefault();
                 var itemClick = element.find(event.target).length > 0;
