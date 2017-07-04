@@ -1,18 +1,12 @@
-// Module Tipster
-angular.module('tipster', [])
-
-.controller('tipsperController', ['$scope', function ($scope) {
-
-    $scope.title = 'Angular Super Tipster';
-}])
 
 // Directives
-.directive('superTipster', function () {
+angular.module('tipster').directive('superTipster', function () {
 
     return {
         restrict: 'E',
         scope: {
-            width: '@'
+            width: '@',
+            label: '@'
         },
         controller: function () {
 
@@ -88,7 +82,6 @@ angular.module('tipster', [])
 
             $(document).on('click', function (event) {
 
-                event.preventDefault();
                 var itemClick = element.find(event.target).length > 0;
 
                 if (itemClick) {

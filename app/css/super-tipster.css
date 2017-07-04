@@ -1,7 +1,7 @@
 body.ios-device {
   cursor: pointer; }
 
-super-tipster {
+.tipster-base {
   position: relative; }
 
 .super-tipster {

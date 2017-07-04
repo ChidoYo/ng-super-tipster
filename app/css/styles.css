@@ -6150,10 +6150,15 @@ textarea {
       .column-block > :last-child {
         margin-bottom: 0; } }
 
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0; }
+
 body.ios-device {
   cursor: pointer; }
 
-super-tipster {
+.tipster-base {
   position: relative; }
 
 .super-tipster {

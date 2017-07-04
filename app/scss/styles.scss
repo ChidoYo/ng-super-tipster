@@ -11,6 +11,13 @@ $global-flexbox: true;
 @include foundation-flex-classes;
 @include foundation-flex-grid;
 
+// Dev Styles
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
 
 // Super-Tipster
 @import 'super-tipster';
