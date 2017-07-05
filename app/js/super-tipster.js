@@ -1,3 +1,4 @@
+angular.module('tipster', [])
 
 // Directives
 angular.module('tipster').directive('superTipster', function () {
