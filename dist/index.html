@@ -20,20 +20,30 @@
 
         <div class="row">
           <div class="columns large-4 medium-4 small-4">
-              <super-tipster>
+              <super-tipster class="tipster-base">
                   <a href="#" tipster-trigger>Link 1</a>
                   <div class="super-tipster">
                       <div class="tipster-content">
                           <div class="tipster-header">
-                              Heading One!
+                              Favorite Decade
                           </div>
-                          <span>I'm number one! I'm number one! I'm number one! I'm number one! I'm number one! I'm number one! I'm number one! I'm number one! I'm number one! I'm number one! I'm number one! I'm number one! I'm number one! I'm number one! I'm number one! I'm number one! I'm number one! I'm number one! </span>
+                          <ul class="tipster-list">
+                              <li>
+                                  <input type="checkbox" ng-model="decades.seventies" ng-change="selectDecade()"> 70's
+                              </li>
+                              <li>
+                                  <input type="checkbox" ng-model="decades.eighties" ng-change="selectDecade()"> 80's
+                              </li>
+                              <li>
+                                  <input type="checkbox" ng-model="decades.nineties" ng-change="selectDecade()"> 90's
+                              </li>
+                          </ul>
                       </div>
                   </div>
               </super-tipster>
           </div>
           <div class="columns large-4 medium-4 small-4">
-              <super-tipster width="400">
+              <super-tipster class="tipster-base" width="400">
                   <button class="button small secondary" tipster-trigger>Link 2</button>
                   <div class="super-tipster">
                       <div class="tipster-content">
@@ -47,7 +57,7 @@
               </super-tipster>
           </div>
           <div class="columns large-4 medium-4 small-4 text-right">
-              <super-tipster>
+              <super-tipster class="tipster-base">
                   <button class="button small" tipster-trigger>Link 3</button>
                   <div class="super-tipster">
                       <div class="tipster-content">
@@ -78,12 +88,23 @@
                 <button class="button small secondary">Link</button>
             </div>
             <div class="columns large-3">
-                <button class="button small secondary">Link</button>
+                <super-tipster class="tipster-base">
+                    <button class="button small secondary" tipster-trigger>Link 4</button>
+                    <div class="super-tipster">
+                        <div class="tipster-content">
+                            <div class="tipster-header">
+                                Heading Four!
+                            </div>
+                            <span>444444444 44444 444444 4444 444444444444 444444 4444 4444444 444 444 444 4444444444</span>
+                        </div>
+                    </div>
+                </super-tipster>
             </div>
         </div>
 
         <script src="lib/jquery/dist/jquery.min.js"></script>
         <script src="lib/angular/angular.js"></script>
+        <script src="js/super-tipster-controller.js"></script>
         <script src="js/super-tipster.js"></script>
     </body>
 </html>
